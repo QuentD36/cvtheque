@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 07 juin 2022 à 11:09
+-- Généré le : mar. 07 juin 2022 à 11:38
 -- Version du serveur : 5.7.26
 -- Version de PHP : 8.0.17
 
@@ -89,7 +89,7 @@ CREATE TABLE IF NOT EXISTS `competence_professionnel` (
   PRIMARY KEY (`id`),
   KEY `competence_professionnel_competence_id_foreign` (`competence_id`),
   KEY `competence_professionnel_professionnel_id_foreign` (`professionnel_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `competence_professionnel`
@@ -102,15 +102,7 @@ INSERT INTO `competence_professionnel` (`id`, `created_at`, `updated_at`, `compe
 (4, '2022-04-08 07:35:26', '2022-04-08 07:35:26', 2, 1),
 (5, '2022-04-08 08:12:13', '2022-04-08 08:12:13', 20, 5),
 (6, '2022-04-08 08:12:45', '2022-04-08 08:12:45', 23, 1),
-(7, '2022-04-08 08:12:50', '2022-04-08 08:12:50', 11, 11),
-(17, '2022-04-08 12:22:26', '2022-04-08 12:22:26', 20, 31),
-(19, '2022-04-12 16:17:42', '2022-04-12 16:17:42', 31, 33),
-(20, '2022-04-12 16:18:02', '2022-04-12 16:18:02', 31, 34),
-(21, '2022-04-12 16:18:56', '2022-04-12 16:18:56', 31, 35),
-(22, '2022-04-12 16:19:08', '2022-04-12 16:19:08', 31, 36),
-(23, '2022-04-12 16:20:11', '2022-04-12 16:20:11', 31, 37),
-(24, '2022-04-12 16:21:54', '2022-04-12 16:21:54', 31, 38),
-(25, '2022-04-12 16:22:06', '2022-04-12 16:22:06', 31, 39);
+(7, '2022-04-08 08:12:50', '2022-04-08 08:12:50', 11, 11);
 
 -- --------------------------------------------------------
 
@@ -257,7 +249,7 @@ CREATE TABLE IF NOT EXISTS `professionnels` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `professionnels_email_unique` (`email`),
   KEY `professionnels_metier_id_foreign` (`metier_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `professionnels`
@@ -280,15 +272,7 @@ INSERT INTO `professionnels` (`id`, `prenom`, `nom`, `cp`, `ville`, `telephone`,
 (16, 'Jean-Pierre', 'Touline', '36200', 'Argenton sur creuse', '02 54 11 88 67', 'jps36@sos-info.com', '1978-02-03', 0, 'S,R', 'Pole emploi', NULL, '', '2020-05-03 22:00:00', '2020-05-03 19:40:05', 9),
 (17, 'Vivien', 'Micasse', '37000', 'Tours', '02 47 17 18 33', 'v.micasse@laposte.net', '1988-10-15', 1, 'S,R', 'CCI Blois', NULL, '', '2020-05-03 07:48:27', '2020-05-03 07:48:27', 8),
 (18, 'Thierry', 'Vosgiens', '36200', 'Ceaulmont', '02 54 47 94 96', 'tvosgiens@free.fr', '1967-07-19', 1, 'S,D', 'Perso ...', 'Réseau : les bases', '', '2020-05-03 15:24:30', '2020-05-07 11:51:48', 5),
-(25, 'Armel', 'Alain', '36270', 'Eguzon', '06 00 00 00 00', 'z@aol.com', '1969-08-17', 0, 'S,R,D', NULL, NULL, '', '2020-05-07 08:07:05', '2020-05-29 10:03:56', 1),
-(31, 'Quentin', 'Delon', '36120', 'ARDENTES', '+33605036670', 'quentin.delon36@gmail.com', '1997-10-25', 0, 'D', NULL, NULL, 'CV - Quentin DELON - Recherche d\'alternance.pdf', '2022-04-08 12:22:26', '2022-04-08 12:22:26', 1),
-(33, 'Quentin', 'Delon', '36120', 'ARDENTES', '+33605036670', 'quentin.delon36fdsqf@gmail.com', '2022-04-12', 0, 'D', NULL, NULL, 'C:\\wamp64\\tmp\\phpEB26.tmp', '2022-04-12 16:17:42', '2022-04-12 16:17:42', 1),
-(34, 'Quentin', 'Delon', '36120', 'ARDENTES', '+33605036670', 'quentin.delon36fdsgfdqf@gmail.com', '2022-04-12', 0, 'D', NULL, NULL, NULL, '2022-04-12 16:18:02', '2022-04-12 16:18:02', 1),
-(35, 'Quentin', 'Delon', '36120', 'ARDENTES', '+33605036670', 'quentin.dfqdsfelon36fdsgfdqf@gmail.com', '2022-04-12', 0, 'D', NULL, NULL, 'C:\\wamp64\\tmp\\phpB0F.tmp', '2022-04-12 16:18:56', '2022-04-12 16:18:56', 1),
-(36, 'Quentin', 'Delon', '36120', 'ARDENTES', '+33605036670', 'quefdqsfntin.dfqdsfelon36fdsgfdqf@gmail.com', '2022-04-12', 0, 'D', NULL, NULL, 'C:\\wamp64\\tmp\\php3B39.tmp', '2022-04-12 16:19:08', '2022-04-12 16:19:08', 1),
-(37, 'Quentin', 'Delon', '36120', 'ARDENTES', '+33605036670', 'quefdqsffdsqfdsqfntin.dfqdsfelon36fdsgfdqf@gmail.com', '2022-04-12', 0, 'D', NULL, NULL, 'C:\\wamp64\\tmp\\php323C.tmp', '2022-04-12 16:20:11', '2022-04-12 16:20:11', 1),
-(38, 'Quentin', 'Delon', '36120', 'ARDENTES', '+33605036670', 'qhgfhsgfuefdqsffdsqfdsqfntin.dfqdsfelon36fdsgfdqf@gmail.com', '2022-04-12', 0, 'D', NULL, NULL, 'C:\\wamp64\\tmp\\phpC32E.tmp', '2022-04-12 16:21:54', '2022-04-12 16:21:54', 1),
-(39, 'Quentin', 'Delon', '36120', 'ARDENTES', '+33605036670', 'qhgfhsgfuenfdqsffdsqfdsqfntin.dfqdsfelon36fdsgfdqf@gmail.com', '2022-04-12', 0, 'D', NULL, NULL, 'public/cv/39/delon-39.pdf', '2022-04-12 16:22:06', '2022-04-12 16:22:06', 1);
+(25, 'Armel', 'Alain', '36270', 'Eguzon', '06 00 00 00 00', 'z@aol.com', '1969-08-17', 0, 'S,R,D', NULL, NULL, '', '2020-05-07 08:07:05', '2020-05-29 10:03:56', 1);
 
 -- --------------------------------------------------------
 
